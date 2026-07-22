@@ -1,0 +1,56 @@
+ranking:
+  coverage_weight: 0.6
+  thermo_weight:   0.2
+  ai_weight:       0.2
+
+# Specificity is a Hard Filter — fails immediately remove the candidate
+specificity_filter:
+  max_allowable_hits:           0
+  allow_dangerous_3prime_match: false
+
+blast_config:
+  db:             "human_genomic"
+  e_value_cutoff: 30000
+  word_size:      7
+
+thermo_config:
+  optimal_tm_min:   58.0
+  optimal_tm_max:   65.0
+  max_tm_delta:     2.0
+  max_gc:           65.0
+  min_gc:           40.0
+  max_self_dimer_dg: -6.0   # kcal/mol
+  max_hairpin_dg:    -2.0   # kcal/mol
+
+primer3_config:
+  product_size_min: 100
+  product_size_max: 250
+  primer_opt_size:  20
+  primer_min_size:  18
+  primer_max_size:  24      # 24 to capture 22-nt WHO-standard primers (e.g. RdRp)
+  primer_opt_tm:    62.0
+  primer_min_tm:    58.0
+  primer_max_tm:    65.0
+  primer_min_gc:    40.0
+  primer_max_gc:    65.0
+  num_return:       10
+  allow_iupac_mixed_bases: true
+
+# Gene coordinates on NC_045512.2 (SARS-CoV-2 Wuhan reference genome)
+# Used by generate_primers_for_target_gene() for gene-specific design
+target_coordinates:
+  rdrp_gene:
+    start: 13468
+    end:   16236
+  n_gene:
+    start: 28274
+    end:   29533
+  e_gene:
+    start: 26245
+    end:   26472
+  s_gene:
+    start: 21563
+    end:   25384
+  orf1ab:
+    start: 265
+    end:   21555

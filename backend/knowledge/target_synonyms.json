@@ -1,0 +1,41 @@
+{
+  "source": "UniProt REST API (rest.uniprot.org), verified live for each accession below",
+  "default_target": "P0DTC2",
+  "targets": [
+    {
+      "uniprot_id": "P0DTC1",
+      "canonical_name": "SARS-CoV-2 Replicase polyprotein 1a",
+      "synonyms": ["orf1a", "replicase 1a", "레플리카제", "복제효소"]
+    },
+    {
+      "uniprot_id": "P0DTC2",
+      "canonical_name": "SARS-CoV-2 Spike glycoprotein",
+      "synonyms": ["spike", "스파이크", "스파이크 단백질", "표면 단백질"]
+    },
+    {
+      "uniprot_id": "P0DTC3",
+      "canonical_name": "SARS-CoV-2 ORF3a protein",
+      "synonyms": ["orf3a"]
+    },
+    {
+      "uniprot_id": "P0DTC4",
+      "canonical_name": "SARS-CoV-2 Envelope small membrane protein",
+      "synonyms": ["envelope protein", "외피 단백질", "e 단백질"]
+    },
+    {
+      "uniprot_id": "P0DTC5",
+      "canonical_name": "SARS-CoV-2 Membrane protein",
+      "synonyms": ["membrane protein", "막 단백질"]
+    },
+    {
+      "uniprot_id": "P0DTC9",
+      "canonical_name": "SARS-CoV-2 Nucleoprotein",
+      "synonyms": ["nucleocapsid", "뉴클레오캡시드", "핵단백질", "뉴클레오단백질"]
+    },
+    {
+      "uniprot_id": "P06821",
+      "canonical_name": "Influenza A virus Matrix protein 2 (M2 proton channel)",
+      "synonyms": ["m2 단백질", "m2 proton channel", "m2 이온채널", "matrix protein 2", "인플루엔자 m2"]
+    }
+  ]
+}

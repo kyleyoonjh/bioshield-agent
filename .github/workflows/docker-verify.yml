@@ -1,0 +1,97 @@
+name: Docker 이미지 검증
+
+# The deployed product is a Linux container. The dev machine is Windows with a
+# .venv — a layout that cannot exist in the image. Bugs that live in that gap are
+# invisible to every local test and reach users anyway. Two real ones did:
+#
+#   1. receptor_prep_engine hardcoded .venv/Scripts/mk_prepare_receptor.exe, so in
+#      the container the file never existed, prep raised into a broad `except`, and
+#      every docking job silently degraded — no receptor, no pocket analysis. It
+#      never crashed and never logged an error anyone looked at.
+#   2. The report worker forked uvicorn's live event loop + thread pool. Linux
+#      defaults to fork; Windows only HAS spawn. A lock held by another thread at
+#      fork time is inherited locked, and the child deadlocks.
+#
+# Neither was reachable from a Windows test run. This workflow is the only place
+# they can be caught before a user finds them.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Dockerfile"
+      - "backend/**"
+      - ".github/workflows/docker-verify.yml"
+  pull_request:
+    paths:
+      - "Dockerfile"
+      - "backend/**"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 배포 프리플라이트 (저장소 정적 검사)
+        # Runs on the CHECKOUT, not inside the container. deploy_preflight inspects
+        # the repository layout (root/backend/sample/..., .dockerignore, the tool
+        # descriptions in mcp_server.py) to catch things BEFORE a build. Inside the
+        # image there is no repository — /app *is* backend/ — so its ROOT resolves
+        # to the filesystem root and it looks for /backend/sample/, which cannot
+        # exist. Container-runtime assertions belong in container_checks.py instead.
+        run: python backend/scripts/deploy_preflight.py
+
+      - name: 이미지 빌드
+        # This step alone verifies what no static check can: that requirements.txt
+        # resolves on Linux, and that `mhcflurry-downloads fetch` — a 135 MB model
+        # download the entire vaccine track is useless without — actually succeeds
+        # during the build instead of failing it.
+        run: docker build -t airemedy:ci .
+
+      - name: 컨테이너 부팅
+        run: |
+          docker run -d --name airemedy -p 8000:8000 airemedy:ci
+          for i in $(seq 1 90); do
+            if curl -sf http://127.0.0.1:8000/api/v1/health > /dev/null; then
+              echo "부팅 완료 (${i}초)"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "::error::90초 내에 부팅하지 못했습니다"
+          docker logs airemedy
+          exit 1
+
+      - name: 컨테이너 내부 검증
+        # Binaries on PATH, sample data in the image, MHCflurry models, the report
+        # worker under a real Linux start method, MCP tool registration, and the
+        # full vaccine job end-to-end. See backend/scripts/container_checks.py.
+        #
+        # -e GITHUB_ACTIONS is not redundant: `docker exec` does NOT inherit the
+        # runner's environment, so inside the container that variable is unset and
+        # the checks emitted no ::error:: annotations at all — which is exactly why
+        # the previous run's failure was unreadable.
+        run: docker exec -e GITHUB_ACTIONS=true airemedy python scripts/container_checks.py
+
+      - name: 서버 로그에 조용한 실패가 없는가
+        # The receptor bug never crashed — it logged a warning and quietly stopped
+        # doing the science. Fail the build on the signatures that mean exactly that.
+        if: always()
+        run: |
+          docker logs airemedy > server.log 2>&1
+          echo "=== 마지막 40줄 ==="
+          tail -40 server.log
+          if grep -qiE "receptor_prep\] failed|스레드로 대체|Traceback" server.log; then
+            echo "::error::로그에 조용한 실패 신호가 있습니다"
+            grep -iE "receptor_prep\] failed|스레드로 대체|Traceback" server.log | head -20
+            exit 1
+          fi
+          echo "✓ 조용한 실패 없음"
+
+      - name: 정리
+        if: always()
+        run: docker rm -f airemedy || true

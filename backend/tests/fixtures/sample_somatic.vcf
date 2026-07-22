@@ -1,0 +1,15 @@
+##fileformat=VCFv4.2
+##source=DeepSomatic_v1.7.0
+##reference=hg38
+##INFO=<ID=GENE,Number=1,Type=String,Description="Gene symbol">
+##INFO=<ID=TRANSCRIPT,Number=1,Type=String,Description="Transcript ID">
+##INFO=<ID=SOMATIC,Number=0,Type=Flag,Description="Somatic variant">
+##INFO=<ID=CSQ,Number=1,Type=String,Description="Consequence">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth">
+##FORMAT=<ID=AF,Number=1,Type=Float,Description="Allele frequency">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	Tumor001
+chr7	55191822	rs121434568	T	G	99.0	PASS	GENE=EGFR;TRANSCRIPT=NM_005228;SOMATIC;CSQ=missense_variant	DP:AF	812:0.34
+chr12	25245350	rs121913529	C	T	95.0	PASS	GENE=KRAS;TRANSCRIPT=NM_004985;SOMATIC;CSQ=missense_variant	DP:AF	640:0.28
+chr17	7674220	rs28934578	C	T	88.0	PASS	GENE=TP53;TRANSCRIPT=NM_000546;SOMATIC;CSQ=missense_variant	DP:AF	455:0.19
+chr1	12345678	.	A	C	12.0	LowQual	GENE=NOISE;SOMATIC	DP:AF	15:0.02
+chr7	55191850	.	G	A,T	91.0	PASS	GENE=EGFR;TRANSCRIPT=NM_005228;SOMATIC;CSQ=missense_variant	GT:DP:AD:GQ	0/1:500:300,180:99

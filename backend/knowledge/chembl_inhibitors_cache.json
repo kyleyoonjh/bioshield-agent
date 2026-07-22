@@ -1,0 +1,582 @@
+{
+ "_comment": "Precomputed REAL ChEMBL IC50 inhibitor records for the curated demo targets, used ONLY as a fallback when the live ChEMBL API exceeds its time budget and ONLY for these exact UniProt accessions. ChEMBL/EBI public API latency is variable (measured 1.8-4s+, occasionally >8s), and the flagship \"COVID spike 신약후보\" query hard-depends on it; an EBI slow spell otherwise turns into a red Kakao 실패. Same pattern as the docking-receptor and Ensembl-VEP caches: real precomputed data for fixed demo inputs, not fabrication. Each entry is exactly what search_known_inhibitors_chembl returned from live ChEMBL, top-10 by measured potency; at fallback time each inhibitor is relabeled source=chembl_cached so a cached answer is never passed off as a fresh live query. Regenerate by re-running the live search for each accession.",
+ "_generated": "2026-07-16",
+ "targets": {
+  "P0DTC2": {
+   "target_name": "SARS-CoV-2 spike glycoprotein",
+   "target_chembl_id": "CHEMBL4662936",
+   "inhibitors": [
+    {
+     "chembl_id": "CHEMBL330348",
+     "name": "HYPOCRELLIN A",
+     "smiles": "COc1c2c3c4c(c(OC)c(=O)c5c(O)cc(OC)c(c6c(OC)cc(O)c(c1=O)c63)c54)[C@@H](C(C)=O)[C@@](C)(O)C2",
+     "ic50_nm": 38.0,
+     "assay_description": "Inhibition of spike glycoprotein S in SARS-CoV-2 pseudovirus infected in human 293T/ACE2 cells assessed as inhibition of viral infection pretreated the virus for 30 mins followed by viral infection measured after 48 hrs by by luciferase reporter gene assay",
+     "document_year": 2021,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL330348/"
+    },
+    {
+     "chembl_id": "CHEMBL5274408",
+     "name": null,
+     "smiles": "CC[C@H](C)[C@H](NC(=O)[C@H](CC(N)=O)NC(=O)[C@@H](NC(=O)[C@H](CC(N)=O)NC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@H](CC(N)=O)NC(=O)[C@H](Cc1c[nH]c2ccccc12)NC(=O)[C@H](CO)NC(=O)[C@H](C)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CO)NC(=O)[C@H](CO)NC(=O)[C@H](CCC(N)=O)NC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](C)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](Cc1cnc[nH]1)NC(=O)[C@H](CC(N)=O)NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@H](CCCCN)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@@H](NC(=O)[C@H](CCCCN)NC(=O)[C@H](C)NC(=O)[C@H](CCC(N)=O)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@@H](N)CCC(=O)O)[C@@H](C)O)[C@@H](C)O)C(=O)N[C@H](C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CCC(=O)O)C(=O)O)[C@@H](C)O",
+     "ic50_nm": 100.0,
+     "assay_description": "Binding affinity of SARS-COV2 S-RBD by BLI assay",
+     "document_year": 2020,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL5274408/"
+    },
+    {
+     "chembl_id": "CHEMBL4869623",
+     "name": null,
+     "smiles": "COc1c(O)c2c(=O)cc(OC)c3c4c(OC)cc(=O)c5c(O)c(OC)c6c(c(c1C[C@](C)(O)[C@H]6C(C)=O)c23)c54",
+     "ic50_nm": 120.0,
+     "assay_description": "Inhibition of spike glycoprotein S in SARS-CoV-2 pseudovirus infected in human 293T/ACE2 cells assessed as inhibition of viral infection pretreated the virus for 30 mins followed by viral infection measured after 48 hrs by by luciferase reporter gene assay",
+     "document_year": 2021,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL4869623/"
+    },
+    {
+     "chembl_id": "CHEMBL76",
+     "name": "CHLOROQUINE",
+     "smiles": "CCN(CC)CCCC(C)Nc1ccnc2cc(Cl)ccc12",
+     "ic50_nm": 160.0,
+     "assay_description": "Inhibition of spike glycoprotein S in SARS-CoV-2 pseudovirus infected in human 293T/ACE2 cells assessed as inhibition of viral infection pretreated the virus for 30 mins followed by viral infection measured after 48 hrs by by luciferase reporter gene assay",
+     "document_year": 2021,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL76/"
+    },
+    {
+     "chembl_id": "CHEMBL4861894",
+     "name": null,
+     "smiles": "COC1=C(CC(C)=O)C(=O)c2c(c(O)cc(OC)c2-c2c(OC)cc(O)c3c2C(=O)C(CC(C)=O)=C(OC)C3=O)C1=O",
+     "ic50_nm": 170.0,
+     "assay_description": "Inhibition of spike glycoprotein S in SARS-CoV-2 pseudovirus infected in human 293T/ACE2 cells assessed as inhibition of viral infection pretreated the virus for 30 mins followed by viral infection measured after 48 hrs by by luciferase reporter gene assay",
+     "document_year": 2021,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL4861894/"
+    },
+    {
+     "chembl_id": "CHEMBL216826",
+     "name": null,
+     "smiles": "COc1ccc(S(=O)(=O)O)cc1/N=N/c1c(S(=O)(=O)O)cc2cc(Nc3nc(Nc4ccccc4)nc(Nc4cc(C)c(/N=N/c5cc(S(=O)(=O)O)cc6cc(S(=O)(=O)O)cc(O)c56)cc4OC)n3)ccc2c1O",
+     "ic50_nm": 600.0,
+     "assay_description": "Inhibition of SARS-COV2 spike protein mediated infection of human ACE2 expressing cells at 50 uM by SPR analysis",
+     "document_year": 2020,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL216826/"
+    },
+    {
+     "chembl_id": "CHEMBL1214598",
+     "name": "UMIFENOVIR",
+     "smiles": "CCOC(=O)c1c(CSc2ccccc2)n(C)c2cc(Br)c(O)c(CN(C)C)c12",
+     "ic50_nm": 4110.0,
+     "assay_description": "Inhibition of SARS-COV2 spike protein mediated infection of human ACE2 expressing cells at 50 uM by SPR analysis",
+     "document_year": 2020,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL1214598/"
+    },
+    {
+     "chembl_id": "CHEMBL5277868",
+     "name": null,
+     "smiles": "O=C(OC[C@H]1O[C@@H](OC(=O)c2cc(O)c(O)c(O)c2)[C@H](OC(=O)c2cc(O)c(O)c(O)c2)[C@H](OC(=O)c2cc(O)c(O)c(O)c2)[C@@H]1O)c1cc(O)c(O)c(O)c1",
+     "ic50_nm": 4500.0,
+     "assay_description": "Inhibition of SARS-COV2 spike protein mediated infection of human ACE2 expressing cells at 50 uM by SPR analysis",
+     "document_year": 2020,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL5277868/"
+    },
+    {
+     "chembl_id": "CHEMBL497",
+     "name": "CLIOQUINOL",
+     "smiles": "Oc1c(I)cc(Cl)c2cccnc12",
+     "ic50_nm": 5600.0,
+     "assay_description": "Inhibition of SARS-COV2 ACE2 binding to spike glycoprotein S RBD domain preincubated for 31 mins with RBD followed by protein addition measured after 2.5 hrs by ELISA",
+     "document_year": 2021,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL497/"
+    },
+    {
+     "chembl_id": "CHEMBL151",
+     "name": "LUTEOLIN",
+     "smiles": "O=c1cc(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12",
+     "ic50_nm": 10600.0,
+     "assay_description": "Inhibition of SARS-COV2 spike protein mediated infection of human ACE2 expressing cells at 50 uM by SPR analysis",
+     "document_year": 2020,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL151/"
+    }
+   ]
+  },
+  "P00533": {
+   "target_name": "EGFR",
+   "target_chembl_id": "CHEMBL203",
+   "inhibitors": [
+    {
+     "chembl_id": "CHEMBL304271",
+     "name": null,
+     "smiles": "CCN(CC)CC(O)CNC(=O)c1cc(C)c(/C=C2\\C(=O)Nc3ncnc(Nc4ccc(F)c(Cl)c4)c32)[nH]1",
+     "ic50_nm": 0.45,
+     "assay_description": "Inhibitory activity towards tyrosine phosphorylation for the epidermal growth factor-receptor kinase",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL304271/"
+    },
+    {
+     "chembl_id": "CHEMBL69960",
+     "name": null,
+     "smiles": "Cc1cc(C(=O)N2CCOCC2)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc(F)c(Cl)c3)c21",
+     "ic50_nm": 40.0,
+     "assay_description": "Inhibition of autophosphorylation of human epidermal growth factor-receptor (EGF-R) expressed in A431 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL69960/"
+    },
+    {
+     "chembl_id": "CHEMBL68920",
+     "name": null,
+     "smiles": "Cc1cc(C)c(/C=C2\\C(=O)Nc3ncnc(Nc4ccc(F)c(Cl)c4)c32)[nH]1",
+     "ic50_nm": 41.0,
+     "assay_description": "Inhibitory activity towards tyrosine phosphorylation for the epidermal growth factor-receptor kinase",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL68920/"
+    },
+    {
+     "chembl_id": "CHEMBL76589",
+     "name": null,
+     "smiles": "N#CC(C#N)=C(N)/C(C#N)=C/c1ccc(O)cc1",
+     "ic50_nm": 125.0,
+     "assay_description": "Inhibitory concentration of EGF dependent autophosphorylation of epidermal growth factor receptor kinase",
+     "document_year": 1989,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL76589/"
+    },
+    {
+     "chembl_id": "CHEMBL69960",
+     "name": null,
+     "smiles": "Cc1cc(C(=O)N2CCOCC2)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc(F)c(Cl)c3)c21",
+     "ic50_nm": 170.0,
+     "assay_description": "Inhibitory activity towards tyrosine phosphorylation for the epidermal growth factor-receptor kinase",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL69960/"
+    },
+    {
+     "chembl_id": "CHEMBL68920",
+     "name": null,
+     "smiles": "Cc1cc(C)c(/C=C2\\C(=O)Nc3ncnc(Nc4ccc(F)c(Cl)c4)c32)[nH]1",
+     "ic50_nm": 300.0,
+     "assay_description": "Inhibition of autophosphorylation of human epidermal growth factor-receptor (EGF-R) expressed in A431 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL68920/"
+    },
+    {
+     "chembl_id": "CHEMBL69960",
+     "name": null,
+     "smiles": "Cc1cc(C(=O)N2CCOCC2)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc(F)c(Cl)c3)c21",
+     "ic50_nm": 440.0,
+     "assay_description": "Inhibition of ligand-induced proliferation in human EGF-R Kinase expressing 3T3 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL69960/"
+    },
+    {
+     "chembl_id": "CHEMBL310798",
+     "name": "TYRPHOSTIN 25",
+     "smiles": "N#CC(C#N)=Cc1cc(O)c(O)c(O)c1",
+     "ic50_nm": 3000.0,
+     "assay_description": "Inhibitory concentration of EGF dependent autophosphorylation of epidermal growth factor receptor kinase",
+     "document_year": 1989,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL310798/"
+    },
+    {
+     "chembl_id": "CHEMBL443268",
+     "name": null,
+     "smiles": "Cc1cc(C(=O)NCCN2CCOCC2)[nH]c1/C=C1\\C(=O)N(C)c2ncnc(Nc3ccc(F)c(Cl)c3)c21",
+     "ic50_nm": 5310.0,
+     "assay_description": "Inhibitory activity towards tyrosine phosphorylation for the epidermal growth factor-receptor kinase",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL443268/"
+    },
+    {
+     "chembl_id": "CHEMBL68920",
+     "name": null,
+     "smiles": "Cc1cc(C)c(/C=C2\\C(=O)Nc3ncnc(Nc4ccc(F)c(Cl)c4)c32)[nH]1",
+     "ic50_nm": 7820.0,
+     "assay_description": "Inhibition of ligand-induced proliferation in human EGF-R Kinase expressing 3T3 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL68920/"
+    }
+   ]
+  },
+  "P01116": {
+   "target_name": "KRAS",
+   "target_chembl_id": "CHEMBL2189121",
+   "inhibitors": [
+    {
+     "chembl_id": "CHEMBL3577123",
+     "name": null,
+     "smiles": "CNc1ncc2cc(-c3cc(NC(=O)NCCC(C)(C)C)c(F)cc3C)cnc2n1",
+     "ic50_nm": 16.0,
+     "assay_description": "Inhibition of KRAS G13D mutant in human HCT116 cells assessed as inhibition of ERK phosphorylation by ELISA",
+     "document_year": 2015,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3577123/"
+    },
+    {
+     "chembl_id": "CHEMBL4072295",
+     "name": null,
+     "smiles": "CC[C@H](C)[C@@H]1NC(=O)[C@H](Cc2ccc(O)cc2)NC(=O)[C@H](CC(C)C)NC(=O)[C@@H]2CCCN2C(=O)[C@@H](NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CCCNC(=N)N)NC(C)=O)CSSC[C@@H](C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCNC(=N)N)C(N)=O)NC(=O)[C@H](C(C)C)NC(=O)[C@@H]2CCCN2C(=O)[C@H](CC(=O)O)NC(=O)[C@H](Cc2ccc(O)cc2)NC(=O)[C@H](CO)NC1=O",
+     "ic50_nm": 42.0,
+     "assay_description": "Inhibition of biotinylated wild-type K-Ras (unknown origin) assessed as inhibition of human SOS1 (564 to 1049 residues)-mediated BODIPY-GDP-GTP exchange after 1 hr by TR-FRET assay",
+     "document_year": 2017,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL4072295/"
+    },
+    {
+     "chembl_id": "CHEMBL3577120",
+     "name": null,
+     "smiles": "CNc1cc2nc(C)c(-c3ccc(F)c(NC(=O)NCCC(C)(C)C)c3)cc2cn1",
+     "ic50_nm": 46.0,
+     "assay_description": "Inhibition of KRAS G13D mutant in human HCT116 cells assessed as inhibition of ERK phosphorylation by ELISA",
+     "document_year": 2015,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3577120/"
+    },
+    {
+     "chembl_id": "CHEMBL3577119",
+     "name": null,
+     "smiles": "CNc1ncc2cc(-c3ccc(F)c(NC(=O)NCCC(C)(C)C)c3)c(C)nc2n1",
+     "ic50_nm": 48.0,
+     "assay_description": "Inhibition of KRAS G13D mutant in human HCT116 cells assessed as inhibition of ERK phosphorylation by ELISA",
+     "document_year": 2015,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3577119/"
+    },
+    {
+     "chembl_id": "CHEMBL3577114",
+     "name": null,
+     "smiles": "CNc1cc2c(cn1)cc(-c1ccc(F)c(NC(=O)Nc3cc(C(C)(C)C)no3)c1)c(=O)n2[C@H]1CCOC1",
+     "ic50_nm": 57.0,
+     "assay_description": "Inhibition of KRAS G13D mutant in human HCT116 cells assessed as inhibition of ERK phosphorylation by ELISA",
+     "document_year": 2015,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3577114/"
+    },
+    {
+     "chembl_id": "CHEMBL4082777",
+     "name": null,
+     "smiles": "CC[C@H](C)[C@@H]1NC(=O)[C@H](Cc2ccc(O)cc2)NC(=O)[C@H](CC(C)C)NC(=O)[C@@H]2CCCN2C(=O)[C@@H](NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H](CCCNC(=N)N)NC(C)=O)CSSC[C@@H](C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@H](CCCNC(=N)N)C(N)=O)NC(=O)[C@H](C(C)C)NC(=O)[C@@H]2CCCN2C(=O)[C@H](CC(=O)O)NC(=O)[C@H](Cc2ccc(O)cc2)NC(=O)[C@H](CO)NC1=O",
+     "ic50_nm": 82.0,
+     "assay_description": "Inhibition of biotinylated wild-type K-Ras (unknown origin) assessed as inhibition of human SOS1 (564 to 1049 residues)-mediated BODIPY-GDP-GTP exchange after 1 hr by TR-FRET assay",
+     "document_year": 2017,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL4082777/"
+    },
+    {
+     "chembl_id": "CHEMBL3577115",
+     "name": null,
+     "smiles": "CCn1c(=O)c(-c2ccc(F)c(NC(=O)Nc3cc(C(C)(C)C)no3)c2)cc2cnc(NC)cc21",
+     "ic50_nm": 91.0,
+     "assay_description": "Inhibition of KRAS G13D mutant in human HCT116 cells assessed as inhibition of ERK phosphorylation by ELISA",
+     "document_year": 2015,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3577115/"
+    },
+    {
+     "chembl_id": "CHEMBL3577116",
+     "name": null,
+     "smiles": "CCn1c(=O)c(-c2cc(NC(=O)NCCC(C)(C)C)c(F)cc2C)cc2cnc(NC)cc21",
+     "ic50_nm": 120.0,
+     "assay_description": "Inhibition of KRAS G13D mutant in human HCT116 cells assessed as inhibition of ERK phosphorylation by ELISA",
+     "document_year": 2015,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3577116/"
+    },
+    {
+     "chembl_id": "CHEMBL3577121",
+     "name": null,
+     "smiles": "CNc1cc2nc(C)c(-c3cc(NC(=O)NCCC(C)(C)C)c(F)cc3C)cc2cn1",
+     "ic50_nm": 120.0,
+     "assay_description": "Inhibition of KRAS G13D mutant in human HCT116 cells assessed as inhibition of ERK phosphorylation by ELISA",
+     "document_year": 2015,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3577121/"
+    },
+    {
+     "chembl_id": "CHEMBL4100766",
+     "name": null,
+     "smiles": "CC[C@H](C)[C@@H]1NC(=O)[C@H](Cc2ccc(O)cc2)NC(=O)[C@H](CC(C)C)NC(=O)[C@@H]2CCCN2C(=O)[C@@H](NC(C)=O)CSSC[C@@H](C(N)=O)NC(=O)[C@H](C(C)C)NC(=O)[C@@H]2CCCN2C(=O)[C@H](CC(=O)O)NC(=O)[C@H](Cc2ccc(O)cc2)NC(=O)[C@H](CO)NC1=O",
+     "ic50_nm": 142.0,
+     "assay_description": "Inhibition of biotinylated wild-type K-Ras (unknown origin) assessed as inhibition of human SOS1 (564 to 1049 residues)-mediated BODIPY-GDP-GTP exchange after 1 hr by TR-FRET assay",
+     "document_year": 2017,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL4100766/"
+    }
+   ]
+  },
+  "P04637": {
+   "target_name": "TP53",
+   "target_chembl_id": "CHEMBL4096",
+   "inhibitors": [
+    {
+     "chembl_id": "CHEMBL2059435",
+     "name": null,
+     "smiles": "CC[C@@H]([C@H](C)O)N1C(=O)[C@@](C)(CC(=O)O)C[C@H](c2cccc(Cl)c2)[C@H]1c1ccc(Cl)cc1",
+     "ic50_nm": 760.0,
+     "assay_description": "Activity at p53 in human SJSA1 cells assessed as induction of p21 mRNA expression after 7 hrs by qRT-PCR analysis in presence of 10% human serum",
+     "document_year": 2012,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL2059435/"
+    },
+    {
+     "chembl_id": "CHEMBL191334",
+     "name": "NUTLIN-3",
+     "smiles": "COc1ccc(C2=N[C@@H](c3ccc(Cl)cc3)[C@@H](c3ccc(Cl)cc3)N2C(=O)N2CCNC(=O)C2)c(OC(C)C)c1",
+     "ic50_nm": 1000.0,
+     "assay_description": "Induction of p53-Ser15 phosphorylation in human HCT116 cells after 24 hrs",
+     "document_year": 2009,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL191334/"
+    },
+    {
+     "chembl_id": "CHEMBL583413",
+     "name": null,
+     "smiles": "Cc1ccc2c(c1)C1=C(C(c3ccc(Br)cc3)O2)C(c2ccc(Br)cc2)n2ncnc2N1C",
+     "ic50_nm": 1000.0,
+     "assay_description": "Induction of p53-Ser15 phosphorylation in human HCT116 cells after 24 hrs",
+     "document_year": 2009,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL583413/"
+    },
+    {
+     "chembl_id": "CHEMBL2059300",
+     "name": null,
+     "smiles": "CC[C@@H](C(=O)OC(C)(C)C)N1C(=O)[C@@](C)(CC(=O)O)C[C@H](c2cccc(Cl)c2)[C@H]1c1ccc(Cl)cc1",
+     "ic50_nm": 1000.0,
+     "assay_description": "Activity at p53 in human HCT116 cells expressing wild type p53 assessed as induction of p21 mRNA expression after 7 hrs by RT-PCR analysis",
+     "document_year": 2012,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL2059300/"
+    },
+    {
+     "chembl_id": "CHEMBL191334",
+     "name": "NUTLIN-3",
+     "smiles": "COc1ccc(C2=N[C@@H](c3ccc(Cl)cc3)[C@@H](c3ccc(Cl)cc3)N2C(=O)N2CCNC(=O)C2)c(OC(C)C)c1",
+     "ic50_nm": 1390.0,
+     "assay_description": "Induction of p53 in human HCT116 cells coexpressing pp53TA-luc assessed as inhibition of cell proliferation after 8 hrs by firefly/renilla luciferase reporter assay",
+     "document_year": 2009,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL191334/"
+    },
+    {
+     "chembl_id": "CHEMBL2177191",
+     "name": null,
+     "smiles": "CC[C@@H](CO)N1C(=O)[C@@](C)(CC(=O)O)C[C@H](c2cccc(Cl)c2)[C@H]1c1ccc(Cl)cc1",
+     "ic50_nm": 1500.0,
+     "assay_description": "Activity at p53 in human SJSA1 cells assessed as induction of p21 mRNA expression after 7 hrs by qRT-PCR analysis in presence of 10% human serum",
+     "document_year": 2012,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL2177191/"
+    },
+    {
+     "chembl_id": "CHEMBL3622373",
+     "name": null,
+     "smiles": "COc1ccc(CCc2nc3cc(-c4c(C)noc4C)ccc3n2C[C@H](C)N2CCOCC2)cc1Cl",
+     "ic50_nm": 1500.0,
+     "assay_description": "Inhibition of doxorubicin-stimulated p53 (unknown origin) expressed in human RKO cells preincubated for 24 hrs followed by addition of doxorubicin for 16 hrs by luciferase reporter assay",
+     "document_year": 2016,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3622373/"
+    },
+    {
+     "chembl_id": "CHEMBL3622373",
+     "name": null,
+     "smiles": "COc1ccc(CCc2nc3cc(-c4c(C)noc4C)ccc3n2C[C@H](C)N2CCOCC2)cc1Cl",
+     "ic50_nm": 1540.0,
+     "assay_description": "Inhibition of p53-induced (unknown origin) expressed in human RKO cells assessed as reduction in p53-induced p21 activation measured after 24 hrs by luciferase reporter gene assay",
+     "document_year": 2016,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3622373/"
+    },
+    {
+     "chembl_id": "CHEMBL2177189",
+     "name": null,
+     "smiles": "CC[C@@H](C(=O)OC(C)(C)C)N1C(=O)[C@@](C)(Cc2nnn[nH]2)C[C@H](c2cccc(Cl)c2)[C@H]1c1ccc(Cl)cc1",
+     "ic50_nm": 1600.0,
+     "assay_description": "Activity at p53 in human SJSA1 cells assessed as induction of p21 mRNA expression after 7 hrs by qRT-PCR analysis in presence of 10% human serum",
+     "document_year": 2012,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL2177189/"
+    },
+    {
+     "chembl_id": "CHEMBL2059300",
+     "name": null,
+     "smiles": "CC[C@@H](C(=O)OC(C)(C)C)N1C(=O)[C@@](C)(CC(=O)O)C[C@H](c2cccc(Cl)c2)[C@H]1c1ccc(Cl)cc1",
+     "ic50_nm": 1900.0,
+     "assay_description": "Activity at p53 in human SJSA1 cells assessed as induction of p21 mRNA expression after 7 hrs by qRT-PCR analysis in presence of 10% human serum",
+     "document_year": 2012,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL2059300/"
+    }
+   ]
+  },
+  "P04626": {
+   "target_name": "HER2 (ERBB2)",
+   "target_chembl_id": "CHEMBL1824",
+   "inhibitors": [
+    {
+     "chembl_id": "CHEMBL136058",
+     "name": null,
+     "smiles": "O=C(/C=C/C(=O)Nc1cc2c(Nc3cccc(Br)c3)ncnc2cn1)NCCCN1CCOCC1",
+     "ic50_nm": 5.0,
+     "assay_description": "Inhibition of heregulin-stimulated autophosphorylation of erbB2 in MDA-MB 453 cells",
+     "document_year": 2001,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL136058/"
+    },
+    {
+     "chembl_id": "CHEMBL69966",
+     "name": null,
+     "smiles": "C#Cc1cccc(Nc2ncnc3c2/C(=C/c2[nH]c(C(=O)NCCN4CCOCC4)cc2C)C(=O)N3)c1",
+     "ic50_nm": 40.0,
+     "assay_description": "Inhibition of autophosphorylation of human Her (p185erbB) tyrosine kinase expressed in SKOV-3 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL69966/"
+    },
+    {
+     "chembl_id": "CHEMBL264382",
+     "name": null,
+     "smiles": "Cc1cc(C(=O)NCCN2CCOCC2)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc4c(ccn4Cc4ccccc4)c3)c21",
+     "ic50_nm": 40.0,
+     "assay_description": "Inhibition of autophosphorylation of human Her (p185erbB) tyrosine kinase expressed in SKOV-3 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL264382/"
+    },
+    {
+     "chembl_id": "CHEMBL67057",
+     "name": null,
+     "smiles": "Cc1cc(C(=O)N2CCOCC2)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc4c(ccn4Cc4ccccc4)c3)c21",
+     "ic50_nm": 100.0,
+     "assay_description": "Inhibition of autophosphorylation of human Her (p185erbB) tyrosine kinase expressed in SKOV-3 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL67057/"
+    },
+    {
+     "chembl_id": "CHEMBL69629",
+     "name": null,
+     "smiles": "Cc1cc(C(=O)NCCN2CCOCC2)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc(F)c(Cl)c3)c21",
+     "ic50_nm": 100.0,
+     "assay_description": "Inhibition of autophosphorylation of human Her (p185erbB) tyrosine kinase expressed in SKOV-3 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL69629/"
+    },
+    {
+     "chembl_id": "CHEMBL66570",
+     "name": null,
+     "smiles": "CCN1CCN(C(=O)c2cc(C)c(/C=C3\\C(=O)Nc4ncnc(Nc5ccc(F)c(Cl)c5)c43)[nH]2)CC1",
+     "ic50_nm": 100.0,
+     "assay_description": "Inhibition of autophosphorylation of human Her (p185erbB) tyrosine kinase expressed in SKOV-3 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL66570/"
+    },
+    {
+     "chembl_id": "CHEMBL67003",
+     "name": null,
+     "smiles": "Cc1cc(C(=O)N2CCOCC2)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc4c(cnn4Cc4ccccc4)c3)c21",
+     "ic50_nm": 100.0,
+     "assay_description": "Inhibition of autophosphorylation of human Her (p185erbB) tyrosine kinase expressed in SKOV-3 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL67003/"
+    },
+    {
+     "chembl_id": "CHEMBL305246",
+     "name": null,
+     "smiles": "Cc1cc(C(=O)N2CCN(C)CC2)[nH]c1/C=C1\\C(=O)Nc2ncnc(Nc3ccc(F)c(Cl)c3)c21",
+     "ic50_nm": 200.0,
+     "assay_description": "Inhibition of autophosphorylation of human Her (p185erbB) tyrosine kinase expressed in SKOV-3 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL305246/"
+    },
+    {
+     "chembl_id": "CHEMBL69358",
+     "name": null,
+     "smiles": "CCN(CC)CCNC(=O)c1cc(C)c(/C=C2\\C(=O)Nc3ncnc(Nc4ccc(F)c(Cl)c4)c32)[nH]1",
+     "ic50_nm": 200.0,
+     "assay_description": "Inhibition of autophosphorylation of human Her (p185erbB) tyrosine kinase expressed in SKOV-3 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL69358/"
+    },
+    {
+     "chembl_id": "CHEMBL68920",
+     "name": null,
+     "smiles": "Cc1cc(C)c(/C=C2\\C(=O)Nc3ncnc(Nc4ccc(F)c(Cl)c4)c32)[nH]1",
+     "ic50_nm": 300.0,
+     "assay_description": "Inhibition of autophosphorylation of human Her (p185erbB) tyrosine kinase expressed in SKOV-3 cells",
+     "document_year": 2002,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL68920/"
+    }
+   ]
+  },
+  "P15056": {
+   "target_name": "BRAF",
+   "target_chembl_id": "CHEMBL5145",
+   "inhibitors": [
+    {
+     "chembl_id": "CHEMBL200889",
+     "name": null,
+     "smiles": "CC(C)(CN)c1nc(-c2ccc(Cl)c(O)c2)c(-c2ccncc2)[nH]1",
+     "ic50_nm": 6.0,
+     "assay_description": "Inhibition bRaf kinase activity",
+     "document_year": 2006,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL200889/"
+    },
+    {
+     "chembl_id": "CHEMBL381250",
+     "name": null,
+     "smiles": "Oc1cc(-c2[nH]c(-c3cccnc3)nc2-c2ccncc2)ccc1Cl",
+     "ic50_nm": 6.0,
+     "assay_description": "Inhibition bRaf kinase activity",
+     "document_year": 2006,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL381250/"
+    },
+    {
+     "chembl_id": "CHEMBL200320",
+     "name": null,
+     "smiles": "NCc1ccc(-c2nc(-c3ccc(Cl)c(O)c3)c(-c3ccncc3)[nH]2)cc1",
+     "ic50_nm": 8.0,
+     "assay_description": "Inhibition bRaf kinase activity",
+     "document_year": 2006,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL200320/"
+    },
+    {
+     "chembl_id": "CHEMBL373011",
+     "name": null,
+     "smiles": "Oc1cc(-c2nc(-c3ccccc3)[nH]c2-c2ccncc2)ccc1Cl",
+     "ic50_nm": 10.0,
+     "assay_description": "Inhibition bRaf kinase activity",
+     "document_year": 2006,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL373011/"
+    },
+    {
+     "chembl_id": "CHEMBL200172",
+     "name": null,
+     "smiles": "CC(C)(C)c1nc(-c2ccc(Cl)c(O)c2)c(-c2ccncc2)[nH]1",
+     "ic50_nm": 12.0,
+     "assay_description": "Inhibition bRaf kinase activity",
+     "document_year": 2006,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL200172/"
+    },
+    {
+     "chembl_id": "CHEMBL200863",
+     "name": null,
+     "smiles": "CC(C)(CNC(=O)Nc1ccc(Cl)cc1)c1nc(-c2ccc(Cl)c(O)c2)c(-c2ccncc2)[nH]1",
+     "ic50_nm": 13.0,
+     "assay_description": "Inhibition bRaf kinase activity",
+     "document_year": 2006,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL200863/"
+    },
+    {
+     "chembl_id": "CHEMBL371952",
+     "name": null,
+     "smiles": "Oc1cc(-c2[nH]c(-c3ccco3)nc2-c2ccncc2)ccc1Cl",
+     "ic50_nm": 13.0,
+     "assay_description": "Inhibition bRaf kinase activity",
+     "document_year": 2006,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL371952/"
+    },
+    {
+     "chembl_id": "CHEMBL381447",
+     "name": null,
+     "smiles": "CC(C)(CNS(C)(=O)=O)c1nc(-c2ccc(Cl)c(O)c2)c(-c2ccncc2)[nH]1",
+     "ic50_nm": 14.0,
+     "assay_description": "Inhibition bRaf kinase activity",
+     "document_year": 2006,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL381447/"
+    },
+    {
+     "chembl_id": "CHEMBL200118",
+     "name": null,
+     "smiles": "Oc1cc(-c2[nH]cnc2-c2ccncc2)ccc1Cl",
+     "ic50_nm": 33.0,
+     "assay_description": "Inhibition bRaf kinase activity",
+     "document_year": 2006,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL200118/"
+    },
+    {
+     "chembl_id": "CHEMBL426476",
+     "name": null,
+     "smiles": "CN(C)CCCNC(=O)c1nc(-c2ccc(Cl)c(O)c2)c(-c2ccncc2)[nH]1",
+     "ic50_nm": 40.0,
+     "assay_description": "Inhibition bRaf kinase activity",
+     "document_year": 2006,
+     "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL426476/"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "_comment": "Precomputed REAL Ensembl data for the bundled demo sample's fixed variants (sample/NSCLC_variants.vcf). Used ONLY as a fallback when the live Ensembl REST API is unreachable, and ONLY for these exact, known inputs — never for arbitrary user variants. Same pattern as the curated docking-receptor cache in gene_index.json: real precomputed data for a fixed demo input so the flagship flow stays deterministic when a third-party API has an outage — not fabrication. 'annotations' is keyed by chrom:pos:ref:alt (chrom without 'chr'); 'protein_sequences' is keyed by transcript_id and holds the exact translated protein Ensembl returns. source is relabeled to '*_cached_sample' at fallback time so a cached answer is never misrepresented as a live call. To regenerate, re-fetch each from a healthy Ensembl and paste the result.",
+  "_note_shape": "The variant-annotation entries below sit at the top level for backward compatibility; protein_sequences is a nested object.",
+  "protein_sequences": {
+    "ENST00000256078": "MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAGQEEYSAMRDQYMRTGEGFLCVFAINNTKSFEDIHHYREQIKRVKDSEDVPMVLVGNKCDLPSRTVDTKQAQDLARSYGIPFIETSAKTRQRVEDAFYTLVREIRQYRLKKISKEEKTPGCVKIKKCIIM"
+  },
+  "7:55249071:T:G": {
+    "annotated": true,
+    "gene_symbol": null,
+    "protein_change": null,
+    "consequence_terms": ["downstream_gene_variant", "intron_variant", "non_coding_transcript_variant"],
+    "note": "No protein-coding missense consequence found at this exact position for any transcript (may fall in a pseudogene/lncRNA/intronic region even if the VCF's own INFO=GENE label names a nearby coding gene).",
+    "source": "ensembl_vep"
+  },
+  "12:25245350:C:T": {
+    "annotated": true,
+    "gene_symbol": "KRAS",
+    "transcript_id": "ENST00000256078",
+    "protein_change": "G12D",
+    "amino_acids": "G/D",
+    "protein_position": 12,
+    "consequence_terms": ["missense_variant"],
+    "impact": "MODERATE",
+    "source": "ensembl_vep"
+  }
+}

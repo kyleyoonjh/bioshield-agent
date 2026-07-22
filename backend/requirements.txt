@@ -1,0 +1,37 @@
+fastapi
+uvicorn[standard]
+pandas
+openpyxl
+scipy
+statsmodels
+python-multipart
+openai
+anthropic
+python-dotenv
+httpx
+primer3-py
+pyfaidx
+supabase>=2.4.0
+pyyaml
+jinja2
+reportlab
+mcp>=1.2.0
+rdkit
+meeko
+gemmi
+mhcflurry
+# mhcflurry's mhcgnomes dependency opens its bundled YAML data files without
+# an explicit encoding=, so it inherits the OS locale's default codec. On
+# Windows with a non-UTF8 locale (e.g. Korean cp949) this raises
+# UnicodeDecodeError; confirmed fix is running the backend with the
+# PYTHONUTF8=1 env var set (see package.json's dev:backend script). After
+# installing, real pretrained models must be fetched once via
+# `mhcflurry-downloads fetch models_class1_presentation` (135MB download) —
+# not included in this file since it's a one-time data fetch, not a package.
+# vina (AutoDock Vina python bindings) intentionally NOT listed here — it has
+# no Windows wheel and fails to build from source without Boost/a C++ toolchain
+# (confirmed on this dev machine). docking_engine.py tries `import vina` at
+# runtime and falls back to a heuristic score when it's unavailable, so the
+# rest of the app installs and runs fine without it. Install manually via
+# conda-forge (`conda install -c conda-forge vina`) on machines where real
+# AutoDock Vina docking is needed.

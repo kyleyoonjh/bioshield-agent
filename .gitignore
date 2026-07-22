@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.env
+
+# Node
+node_modules/
+dist/
+.turbo/
+*.log
+
+# Generated runtime data
+backend/reports/
+backend/cache/
+memory/
+
+# Off-target tooling — portable BLAST+/Bowtie2 binaries and genome reference data
+# (too large for git; see backend/.env BLASTN_PATH / BLAST_DB_PATH)
+backend/tools/
+backend/refs/
+
+# AutoDock Vina binary (downloaded from ccsb-scripps/AutoDock-Vina GitHub
+# releases, see backend/services/docking_engine.py — not committed, same
+# reasoning as backend/tools/ above)
+backend/bin/
+
+# OS
+.DS_Store
+Thumbs.db

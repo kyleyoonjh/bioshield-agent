@@ -1,0 +1,115 @@
+{
+  "source": "PubChem PUG REST API (ConnectivitySMILES), RDKit-canonicalized and validated",
+  "drugs": [
+    {
+      "name": "Aspirin",
+      "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+      "category": "NSAID"
+    },
+    {
+      "name": "Caffeine",
+      "smiles": "Cn1c(=O)c2c(ncn2C)n(C)c1=O",
+      "category": "Stimulant"
+    },
+    {
+      "name": "Ibuprofen",
+      "smiles": "CC(C)Cc1ccc(C(C)C(=O)O)cc1",
+      "category": "NSAID"
+    },
+    {
+      "name": "Acetaminophen",
+      "smiles": "CC(=O)Nc1ccc(O)cc1",
+      "category": "Analgesic"
+    },
+    {
+      "name": "Naproxen",
+      "smiles": "COc1ccc2cc(C(C)C(=O)O)ccc2c1",
+      "category": "NSAID"
+    },
+    {
+      "name": "Metformin",
+      "smiles": "CN(C)C(=N)N=C(N)N",
+      "category": "Antidiabetic"
+    },
+    {
+      "name": "Atorvastatin",
+      "smiles": "CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CCC(O)CC(O)CC(=O)O",
+      "category": "Statin"
+    },
+    {
+      "name": "Losartan",
+      "smiles": "CCCCc1nc(Cl)c(CO)n1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1",
+      "category": "Antihypertensive"
+    },
+    {
+      "name": "Omeprazole",
+      "smiles": "COc1ccc2nc(S(=O)Cc3ncc(C)c(OC)c3C)[nH]c2c1",
+      "category": "PPI"
+    },
+    {
+      "name": "Amoxicillin",
+      "smiles": "CC1(C)SC2C(NC(=O)C(N)c3ccc(O)cc3)C(=O)N2C1C(=O)O",
+      "category": "Antibiotic"
+    },
+    {
+      "name": "Ciprofloxacin",
+      "smiles": "O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O",
+      "category": "Antibiotic"
+    },
+    {
+      "name": "Metronidazole",
+      "smiles": "Cc1ncc([N+](=O)[O-])n1CCO",
+      "category": "Antibiotic"
+    },
+    {
+      "name": "Diphenhydramine",
+      "smiles": "CN(C)CCOC(c1ccccc1)c1ccccc1",
+      "category": "Antihistamine"
+    },
+    {
+      "name": "Loratadine",
+      "smiles": "CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1",
+      "category": "Antihistamine"
+    },
+    {
+      "name": "Sildenafil",
+      "smiles": "CCCc1nn(C)c2c(=O)[nH]c(-c3cc(S(=O)(=O)N4CCN(C)CC4)ccc3OCC)nc12",
+      "category": "PDE5 inhibitor"
+    },
+    {
+      "name": "Warfarin",
+      "smiles": "CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O",
+      "category": "Anticoagulant"
+    },
+    {
+      "name": "Simvastatin",
+      "smiles": "CCC(C)(C)C(=O)OC1CC(C)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C21",
+      "category": "Statin"
+    },
+    {
+      "name": "Diazepam",
+      "smiles": "CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21",
+      "category": "Benzodiazepine"
+    },
+    {
+      "name": "Fluoxetine",
+      "smiles": "CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1",
+      "category": "SSRI"
+    },
+    {
+      "name": "Ranitidine",
+      "smiles": "CNC(=C[N+](=O)[O-])NCCSCc1ccc(CN(C)C)o1",
+      "category": "H2 antagonist"
+    },
+    {
+      "name": "Albuterol",
+      "smiles": "CC(C)(C)NCC(O)c1ccc(O)c(CO)c1",
+      "category": "Bronchodilator"
+    },
+    {
+      "name": "Chloroquine",
+      "smiles": "CCN(CC)CCCC(C)Nc1ccnc2cc(Cl)ccc12",
+      "category": "Antimalarial"
+    }
+  ]
+}
